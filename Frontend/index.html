@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Contract DApp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.1/ethers.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Smart Contract DApp</h1>
+            <div class="wallet-section">
+                <button id="connectWallet" class="btn-primary">Connect Wallet</button>
+                <div id="walletInfo" class="wallet-info hidden">
+                    <span id="accountAddress"></span>
+                    <span id="balance"></span>
+                </div>
+            </div>
+        </header>
 
+        <main>
+            <div class="card">
+                <h2>Contract Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Contract Address:</label>
+                        <input type="text" id="contractAddress" placeholder="0x..." />
+                    </div>
+                    <div class="info-item">
+                        <label>Network:</label>
+                        <span id="networkName">Not Connected</span>
+                    </div>
+                </div>
+                <button id="connectContract" class="btn-secondary">Connect to Contract</button>
+            </div>
+
+            <div class="card">
+                <h2>Read Contract</h2>
+                <div class="function-section">
+                    <div class="input-group">
+                        <label for="readFunction">Function Name:</label>
+                        <input type="text" id="readFunction" placeholder="e.g., totalSupply, balanceOf" />
+                    </div>
+                    <div class="input-group">
+                        <label for="readParams">Parameters (comma-separated):</label>
+                        <input type="text" id="readParams" placeholder="e.g., 0x123..., 100" />
+                    </div>
+                    <button id="readContract" class="btn-secondary">Read</button>
+                    <div id="readResult" class="result"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Write Contract</h2>
+                <div class="function-section">
+                    <div class="input-group">
+                        <label for="writeFunction">Function Name:</label>
+                        <input type="text" id="writeFunction" placeholder="e.g., transfer, approve" />
+                    </div>
+                    <div class="input-group">
+                        <label for="writeParams">Parameters (comma-separated):</label>
+                        <input type="text" id="writeParams" placeholder="e.g., 0x123..., 100" />
+                    </div>
+                    <div class="input-group">
+                        <label for="ethValue">ETH Value (optional):</label>
+                        <input type="text" id="ethValue" placeholder="0.0" />
+                    </div>
+                    <button id="writeContract" class="btn-primary">Execute Transaction</button>
+                    <div id="writeResult" class="result"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Transaction History</h2>
+                <div id="transactionHistory" class="transaction-list">
+                    <p class="no-transactions">No transactions yet</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Make sure you're on the correct network and have sufficient gas fees</p>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loading-spinner"></div>
+        <p>Processing transaction...</p>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification hidden">
+        <span id="notificationMessage"></span>
+        <button id="closeNotification">&times;</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
