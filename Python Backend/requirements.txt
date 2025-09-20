@@ -1,1 +1,50 @@
+# Flask Web Framework
+Flask==2.3.3
+Flask-CORS==4.0.0
 
+# Blockchain and Web3 Integration
+web3==6.11.1
+eth-account==0.9.0
+eth-utils==2.3.0
+
+# Environment Management
+python-dotenv==1.0.0
+
+# HTTP Requests (for additional API calls if needed)
+requests==2.31.0
+
+# Data Handling and Utilities
+cryptography==41.0.7
+hexbytes==0.3.1
+
+# Logging and Monitoring
+colorlog==6.7.0
+
+# Development Dependencies
+pytest==7.4.3
+pytest-flask==1.3.0
+black==23.9.1
+flake8==6.1.0
+
+# Production Server (optional)
+gunicorn==21.2.0
+waitress==2.1.2
+
+# Database (if needed for caching/storage)
+SQLAlchemy==2.0.23
+Flask-SQLAlchemy==3.1.1
+
+# Rate Limiting and Security
+Flask-Limiter==3.5.0
+Werkzeug==2.3.7
+
+# JSON Web Tokens (for authentication if needed)
+PyJWT==2.8.0
+
+# Async Support (optional)
+aiohttp==3.9.0
+asyncio-mqtt==0.16.1
+
+# Additional Utilities
+python-dateutil==2.8.2
+pytz==2023.3
