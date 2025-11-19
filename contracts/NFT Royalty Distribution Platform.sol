@@ -1,3 +1,4 @@
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -131,3 +132,4 @@ contract NFTRoyaltyDistribution is ERC721Royalty, Ownable {
         return _tokenURIs[tokenId];
     }
 }
+
