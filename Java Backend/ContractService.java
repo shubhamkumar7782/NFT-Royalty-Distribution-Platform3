@@ -1,3 +1,4 @@
+
 """
 contract_service.py - Smart Contract Business Logic Service
 Python equivalent to ContractService.java - uses Web3.py (Python's equivalent to web3.js/ethers.js)
