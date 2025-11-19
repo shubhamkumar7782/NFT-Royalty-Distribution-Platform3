@@ -1,3 +1,4 @@
+
 """
 Application.py - Main Flask application with UI routes
 Python equivalent to Application.java
